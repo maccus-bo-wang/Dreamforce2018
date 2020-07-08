@@ -1,7 +1,9 @@
 # Get the private key from the environment variable
 echo "Setting up Production Connection..."
 mkdir keys
-echo $SFDC_SERVER_KEY | base64 -d > keys/server.key
+#echo $SFDC_SERVER_KEY | base64 -d > keys/server.key
+echo "New item to generate server.key..."
+echo $SFDC_SERVER_KEY > keys/server.key
 
 # Authenticate to salesforce
 echo "Authenticating..."
